@@ -1,0 +1,283 @@
+.about {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .about-wrap {
+        width: 100%;
+
+        .section-1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .logo-wrap {
+                padding: 20px 0;
+
+                img {
+                    width: 150px;
+                }
+            }
+        }
+
+        .section-2 {
+            width: 100%;
+            height: 74vh;
+            margin: 50px 0;
+            position: relative;
+
+            // border: 1px solid magenta;
+            .header {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 80%;
+                    height: 550px;
+                }
+
+            }
+
+            .title {
+                position: absolute;
+                left: 0;
+                bottom: 150px;
+
+                h1 {
+                    font-size: 6em;
+                    color: var(--text-color);
+                }
+            }
+        }
+
+        .section-3 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+
+            .portfolio {
+                width: 100%;
+
+                .portfolio-wrap {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    .portfolio-item {
+                        width: 80%;
+
+                        .company-detail {
+                            width: 100%;
+
+
+                            .cont {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: flex-start;
+
+                                .cont-right {
+
+                                    padding-left: 50px;
+
+
+                                    h1 {
+                                        font-size: 3.8vw;
+                                        color: var(--text-color);
+                                        display: flex;
+                                        align-items: flex-start;
+                                    }
+
+                                    p {
+                                        font-size: 15px;
+                                        color: var(--text-color);
+                                        text-align: justify;
+                                        margin-top: 60px;
+                                        line-height: 2em;
+
+                                        // padding-right: 20px;
+
+                                    }
+
+                                }
+
+                                .cont-left {
+                                    display: grid;
+                                    grid-template-columns: 200px 200px;
+                                    grid-template-rows: 200px 200px;
+                                    padding: 20px;
+                                    // border: 1px solid lavender;
+                                    gap: 20px;
+
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        object-position: center;
+
+                                        &:nth-child(2) {
+                                            translate: 0 -30px 0;
+                                        }
+
+                                        &:nth-child(4) {
+                                            translate: 0 -30px 0;
+                                        }
+                                    }
+                                }
+
+
+
+                            }
+                        }
+
+
+                    }
+
+                }
+            }
+        }
+
+        .section-4 {
+            .founder-details {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 150px;
+                background: black;
+                padding: 100px 0;
+
+                .founder-details-wrap {
+                    width: 80%;
+                    height: 350px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid white;
+
+                    .f-left {
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                        color: white;
+
+                        // border: 1px solid lavender;
+                        .det-l {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            // gap: 20px;
+
+                            img {
+                                width: 150px;
+                                height: 150px;
+                                border-radius: 50%;
+                                object-fit: cover;
+                                object-position: top right;
+                                margin-bottom: 20px;
+
+                            }
+
+                            h1 {
+                                font-size: 20px;
+
+                            }
+                        }
+
+
+                    }
+
+                    .f-right {
+                        width: 70%;
+                        height: 100%;
+                        // border: 1px solid cadetblue;
+                        color: white;
+                        padding: 35px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        .f-right-wrap {
+
+                            // padding: ;
+                            .personal-hi {
+
+                                p {
+                                    text-align: justify;
+                                }
+
+                            }
+
+                            .social-icon {
+                                display: flex;
+                                justify-content: flex-start;
+                                gap: 20px;
+                                align-items: center;
+                                margin-top: 30px;
+
+                                a {
+                                    text-decoration: none;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    width: 60px;
+                                    height: 60px;
+                                    padding: 10px;
+                                    border-radius: 7px;
+                                    background: rgb(21, 22, 23);
+                                    color: var(--text-color);
+
+                                    &:hover {
+                                        background: white;
+                                        color: black;
+                                        .icon-face{
+
+                                            animation: shaky 0.5s 0.5s infinite alternate-reverse ease-in-out;
+                                        }
+                                        
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes shaky {
+
+    0% {
+        scale: 1;
+        rotate: 20deg;
+    }
+
+    20% {
+        scale: 1.12;
+        rotate: 0deg;
+    }
+
+    40% {
+        scale: 1.08;
+        rotate: -20deg;
+    }
+
+    100% {
+        scale: 1;
+        rotate: 0deg;
+    }
+
+
+}

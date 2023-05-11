@@ -1,0 +1,163 @@
+.homepage {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    .homepage-wrap {
+        width: 100%;
+
+
+        .section-1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .logo-wrap {
+                padding: 20px 0;
+
+                img {
+                    width: 150px;
+                }
+
+            }
+        }
+
+
+        .section-2 {
+            width: 100%;
+            height: 74vh;
+            margin: 50px 0;
+            position: relative;
+
+            // border: 1px solid magenta;
+            .header {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 80%;
+                    height: 550px;
+                }
+
+            }
+
+            .title {
+                position: absolute;
+                left: 0;
+                bottom: 150px;
+
+                h1 {
+                    font-size: 6em;
+                    color: var(--text-color);
+                }
+            }
+        }
+
+        .section-3 {
+            width: 100%;
+            // border: 1px solid wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 160px;
+
+            .gallery {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                gap: 65px 100px;
+
+
+                .gallery-item {
+                    height: 500px;
+
+                    &:hover {
+
+                        h1 {
+
+                            &::before {
+                                width: 40px;
+                                transition: 0.5s ease;
+                            }
+                        }
+
+                        .img-gallery {
+                            scale: 0.98;
+                            transition: 0.5s ease;
+
+                            &::before {
+                                display: block;
+                            }
+
+                        }
+                    }
+
+                    .img-gallery {
+                        width: 100%;
+                        height: 400px;
+                        position: relative;
+                        transition: 0.5s ease;
+
+                        &::before {
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.539);
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 2;
+                            display: none;
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            position: relative;
+                            z-index: 1;
+                            transition: 0.5s ease;
+
+
+                        }
+                    }
+
+
+
+                    h1 {
+                        color: var(--text-color);
+                        font-size: 20px;
+                        font-weight: 300;
+                        padding: 20px 0px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 10px;
+
+                        &::before {
+                            content: "";
+                            width: 0px;
+                            height: 2px;
+                            border-radius: 3px;
+                            background: var(--text-color);
+                            transition: 0.5s ease;
+
+
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
